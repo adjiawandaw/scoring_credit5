@@ -35,7 +35,7 @@ def set_background(image_path):
         unsafe_allow_html=True
     )
 
-set_background("image7.jpg")
+set_background("fronted/image7.jpg")
 
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
@@ -73,7 +73,7 @@ with st.container():
 @st.cache_data
 def load_data():
     try:
-        return pd.read_csv("../data/train.csv")
+        return pd.read_csv("data/train.csv")
     except:
         return pd.DataFrame()
 
@@ -95,7 +95,7 @@ with tab1:
 
     try:
         
-        df_test = pd.read_csv("../data/test.csv").head(100)
+        df_test = pd.read_csv("data/test.csv").head(100)
         id_col = [col for col in df_test.columns if "id" in col.lower()]
         if id_col:
             id_col = id_col[0]
