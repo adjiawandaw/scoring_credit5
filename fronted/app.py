@@ -45,7 +45,7 @@ def load_lottiefile(filepath: str):
 with st.container():
     col_icon, col_title = st.columns([1, 10])
     with col_icon:
-        st.image("icons8-combo-chart-50.png", width=60)  # Icône en noir élégant
+        st.image("fronted/icons8-combo-chart-50.png", width=60)  # Icône en noir élégant
     with col_title:
         st.markdown("""
             <style>
